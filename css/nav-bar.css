@@ -22,6 +22,19 @@
     position: absolute;
     left: 15px;
     bottom: 15px;
+    animation: notiAnime 2s ease-in-out infinite;
+}
+
+@keyframes notiAnime {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px) rotateY(360deg);
+    }
+    100% {
+        transform: none;
+    }
 }
 
 .nav__ellipsis-noti {
@@ -37,4 +50,32 @@
     position: absolute;
     left: 27px;
     bottom: 27px;
+}
+
+.nav__btn {
+    animation: btnAnime 0.3s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.nav__btn:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.nav__btn:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.nav__btn:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+@keyframes btnAnime {
+    from {
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
 }
