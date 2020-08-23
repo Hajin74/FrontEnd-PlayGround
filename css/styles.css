@@ -4,11 +4,15 @@
 @import "variables.css";
 @import "nav-bar.css";
 @import "screen-header.css";
+@import "friends.css";
+@import "user-component.css";
+@import "badge.css";
 
 
 body {
     font-family: 'Open Sans', sans-serif;
     padding-top: 20px;
+    color: #2e363e;
 }
 
 .welcome-header {
@@ -69,4 +73,8 @@ body {
     text-decoration: none;
     color: inherit; /*상속*/
     font-size: 15px;
+}
+
+.main-screen {
+    padding: 0px var(--horizontal-space);
 }
