@@ -1,10 +1,11 @@
 .settings__setting {
     padding: 20px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.527);
     font-size: 22px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: rgba(255, 255, 255, 0.527);
 }
 
 .settings__setting i {
@@ -14,5 +15,5 @@
 }
 
 .settings__setting-column:last-child {
-    opacity: 0.5;
+    color: white;
 }

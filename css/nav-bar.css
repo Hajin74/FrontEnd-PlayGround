@@ -1,11 +1,14 @@
 .nav {
-    background-color: #f9f9fa;
+    background-color:rgb(163, 211, 67);
     padding: 20px 50px;
     box-sizing: border-box;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
     position: fixed;
     bottom: 0px;
     width: 100%;
+}
+
+.nav i {
+    color: white;
 }
 
 .nav__list {

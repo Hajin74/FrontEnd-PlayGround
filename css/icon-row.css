@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 25px;
+    padding-top: 20px;
+    color: rgba(255, 255, 255, 0.527);
 }
 
 .icon-row__icon {
@@ -17,3 +19,4 @@
 .icon-row__icon span {
     margin-top: 18px;
 }
+
