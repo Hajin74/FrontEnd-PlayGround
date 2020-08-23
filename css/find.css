@@ -35,6 +35,10 @@
     margin-bottom: 20px;
 }
 
+.open-post__title:hover {
+    color: white;
+}
+
 .open-post__title {
     font-weight: 600;
     margin-bottom: 7px;
@@ -72,7 +76,7 @@
 }
 
 .open-post__member-status {
-    color: rgba(255, 255, 255, 0.727);
+    color: pink;
 }
 
 .open-post__photo {

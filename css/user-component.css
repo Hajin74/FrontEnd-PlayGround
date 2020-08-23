@@ -62,3 +62,7 @@
 .user-component__subtitle {
     color: rgba(255, 255, 255, 0.527);
 }
+
+.user-component__column:first-child:hover {
+    color: white;
+}
