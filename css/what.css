@@ -1,0 +1,54 @@
+.what {
+    width: 100%;
+    display: flex;
+    color: #E2C5B6;
+}
+
+.what_column {
+    width: 50%;
+}
+
+.what_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.what_intro {
+    background-color: #193C46;
+    padding: 12% 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.what_intro h1 {
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    z-index: 1;
+}
+
+.what_intro .highlight {
+    width: 450px;
+    text-align: center;
+    color: #193C46;
+    border-top: 23px solid #775954;
+    position: relative;
+    top: -15px;
+}
+
+.what_intro p {
+    margin-bottom: 40px;
+    font-weight: 200;
+    line-height: 200%;
+    text-align: center;
+}
+
+.what_intro_more {
+    width: 135px;
+    height: 50px;
+    padding: 12px 0;
+    font-weight: 200;
+    border-bottom: 2px solid #E2C5B6;
+    text-align: center
+}

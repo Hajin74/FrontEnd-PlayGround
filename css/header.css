@@ -1,0 +1,38 @@
+body {
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: #E2C5B6;
+    color: #775954;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-weight: 200;
+}
+
+.header_column {
+    display: flex;
+    justify-content: center;
+}
+
+.header_column:first-child,
+.header_column:last-child {
+    width: 15%;
+}
+
+.header_column:nth-child(2) {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.header_column:nth-child(2) img {
+    width: 23%;
+}
+
+.header_column i {
+    margin-left: 40px;
+}

@@ -1,0 +1,44 @@
+.info {
+    width: 100%;
+    background-color: #193C46;
+    color: #F9DECE;
+}
+
+.info_columns {
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info_column {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_column span {
+    margin-right: 50px;
+}
+
+.info_column span:last-child {
+    margin-right: 0;
+}
+
+.info_column:nth-child(2) {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_column img {
+    width: 50%;
+}
+
+.info_copyright {
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: 200;
+}
