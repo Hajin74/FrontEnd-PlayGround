@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Momentum App</title>
+</head>
+<body>
+    <!-- 로그인 -->
+    <form id="login-form"  class="hidden">
+        <input type="text" placeholder="what is your name?" required maxlength="15"/>
+        <button>LOG IN</button>
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+
+    <!-- 시간 -->
+    <h2 id="clock">00:00:00</h2>
+
+    <!-- 명언 -->
+    <div id="quote">
+        <span></span><br><br>
+        <span></span>
+    </div>
+
+    <!-- 투두리스트 -->
+    <form id="todo-form">
+        <input type="text" placeholder="여기서 할 일 작성 하세요." />
+    </form>
+    <ul id="todo-list"></ul>
+
+    <!-- 날씨 -->
+    <div id="weather">
+        <span></span><br>
+        <span></span>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html>
