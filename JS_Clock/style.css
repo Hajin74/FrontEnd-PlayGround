@@ -1,0 +1,54 @@
+body {
+    height: 100vh;
+    background-color: #F28D77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.clock-head {
+    width: 60px;
+    height: 30px;
+    background-color: #7D4EBF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.clock {
+    background-color: #7D4EBF;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,.2), 0 10px 10px -5px rgba(0,0,0,.04);
+}
+
+.clock_inner {
+    background-color: #F2C335;
+    border-radius:30px;
+    width: 530px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 120px;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.clock_inner span {
+    margin: 0 20px;
+}
+
+.clock-foot {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
