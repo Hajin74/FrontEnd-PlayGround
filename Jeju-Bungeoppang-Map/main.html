@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/bungeoppang-icon.png">
+    <meta name="Keywords" content="제주도 붕어빵 지도, 붕어빵, 제주도, 지도, 겨울, 간식, 팥붕, 슈붕" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>제주도 붕어빵 지도</title>
+</head>
+<body>
+<div id="map-container">
+
+     <div id="map-navbar">
+        <h1 id="map-title">제주도 붕어빵 지도</h1>
+        <p id="developer-email">개발자 이메일 : yoonmij9974@naver.com</p>
+    </div>
+
+
+    <div id="map-main">
+        <!-- api 키 -->
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey={API_KEY}&libraries=services"></script>
+
+        <!-- json 파일 읽어오기 -->
+        <script type="text/javascript" src="./data/locations.json"></script>
+        <script>
+            var locationData = JSON.parse(JSON.stringify(Params))["locations"];
+        </script>
+        
+        <script>
+          // 인포윈도우를 표시하는 클로저를 만드는 함수
+          function makeOverListener(map, marker, infowindow) {
+              return function() {
+                  infowindow.open(map, marker);
+              };
+          }
+        </script>
+
+        <!-- 지도 띄우기 -->
+        <script>
+            var mapContainer = document.getElementById('map-main');
+            var mapOption = { 
+                center: new kakao.maps.LatLng(locationData[0]["lat"], locationData[0]["lng"]),
+                level: 7
+            };
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+        </script>
+                
+        <!-- 지도 확대 축소 제어하기 -->
+        <script>
+            var zoomControl = new kakao.maps.ZoomControl();
+            map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+        </script>
+
+        <!-- 여러 개의 마커 찍기 + 인포윈도우 띄우기 -->
+        <script>
+            for (var i = 0; i < locationData.length; i++) {
+                var marker = new kakao.maps.Marker({
+                    map: map,
+                    title: locationData[i]["title"],
+                    position: new kakao.maps.LatLng(locationData[i]["lat"], locationData[i]["lng"])
+                });
+               
+                (function (index) {
+                    var geocoder = new kakao.maps.services.Geocoder();
+                    var coord = new kakao.maps.LatLng(locationData[index]["lat"], locationData[index]["lng"]);
+                    
+                    var callback = function (result, status) {
+                        if (status === kakao.maps.services.Status.OK) {
+                            var iwContent = `
+                                <div class="overlay-wrapper">
+                                  <p class="shop-name">${locationData[index]["title"]}</p>
+                                  <a class="shop-map-detail" href="https://map.kakao.com/link/map/${result[0].address.address_name},${locationData[index]["lat"]},${locationData[index]["lng"]}" style="color:blue; text-decoration: none;">📍카카오맵으로 보기</a> 
+                                </div>
+                            `;
+                            var iwPosition = new kakao.maps.LatLng(locationData[index]["lat"], locationData[index]["lng"]);
+                            var iwRemoveable = true;
+
+                            var infowindow = new kakao.maps.InfoWindow({
+                                map: map,
+                                content: iwContent,
+                                position : iwPosition, 
+                                removable : iwRemoveable
+                            });
+                            
+                        }
+                    };
+                    
+                    geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
+                })(i);
+            }
+        </script>
+    </div>
+</div>
+</body>
+</html>
