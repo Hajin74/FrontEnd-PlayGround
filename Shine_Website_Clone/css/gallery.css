@@ -1,0 +1,9 @@
+.gallery {
+    width: 100%;
+    display: flex;
+}
+
+.gallery img {
+    width: 16.657%;
+    cursor: pointer;
+}
