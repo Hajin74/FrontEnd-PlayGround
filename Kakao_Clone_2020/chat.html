@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Kokoa Clone</title>
+</head>
+<body id="chat-screen">
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>No Service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:40</span>
+        </div>
+        <div class="status-bar__column">
+            <span>74%</span>
+            <i class="fas fa-battery-three-quarters fa-lg"></i>
+            <i class="fas fa-bolt"></i>
+        </div>
+    </div>
+
+    <header class="alt-header">
+        <div class="alt-header__column">
+            <a href="chats.html">
+                <i class="fas fa-angle-left fa-2x"></i>
+            </a>
+        </div>
+        <div class="alt-header__column">
+            <h1 class="alt-header__title">HJ</h1>
+        </div>
+        <div class="alt-header__column">
+            <span>
+                <i class="fas fa-search fa-2x"></i>
+            </span>
+            <span>
+                <i class="fas fa-bars fa-2x"></i>
+            </span>
+        </div>
+    </header>
+
+    <main class="main-screen main-chat">
+        <div class="chat__timestamp">
+            Sunday, August 23, 2020
+        </div>
+
+        <div class="message-row">
+            <img src="https://avatars0.githubusercontent.com/u/67518596?s=460&u=39575392a5ada4d5f422985208a13a1ab970e721&v=4" />
+            <div class="message-row__content">
+                <span class="message__author">HJ</span>
+                <div class="message__info">
+                    <span class="message__bubble">Hello</span>
+                    <span class="message__time">21:27</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-row message-row--own">
+            <div class="message-row__content">
+                <div class="message__info">
+                    <span class="message__bubble">What's up</span>
+                    <span class="message__time">21:27</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-row">
+            <img src="https://avatars0.githubusercontent.com/u/67518596?s=460&u=39575392a5ada4d5f422985208a13a1ab970e721&v=4" />
+            <div class="message-row__content">
+                <span class="message__author">HJ</span>
+                <div class="message__info">
+                    <span class="message__bubble">Did you have a dinner?</span>
+                    <span class="message__time">21:28</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-row message-row--own">
+            <div class="message-row__content">
+                <div class="message__info">
+                    <span class="message__bubble">not yet</span>
+                    <span class="message__time">21:29</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-row">
+            <img src="https://avatars0.githubusercontent.com/u/67518596?s=460&u=39575392a5ada4d5f422985208a13a1ab970e721&v=4" />
+            <div class="message-row__content">
+                <span class="message__author">HJ</span>
+                <div class="message__info">
+                    <span class="message__bubble">How about kimchi-gimbap?</span>
+                    <span class="message__time">21:32</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-row message-row--own">
+            <div class="message-row__content">
+                <div class="message__info">
+                    <span class="message__bubble">cool</span>
+                    <span class="message__time">21:32</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-row">
+            <img src="https://avatars0.githubusercontent.com/u/67518596?s=460&u=39575392a5ada4d5f422985208a13a1ab970e721&v=4" />
+            <div class="message-row__content">
+                <span class="message__author">HJ</span>
+                <div class="message__info">
+                    <span class="message__bubble">I'm starving.</span>
+                    <span class="message__time">21:33</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-row message-row--own">
+            <div class="message-row__content">
+                <div class="message__info">
+                    <span class="message__bubble">me too.</span>
+                    <span class="message__time">21:33</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-row">
+            <img src="https://avatars0.githubusercontent.com/u/67518596?s=460&u=39575392a5ada4d5f422985208a13a1ab970e721&v=4" />
+            <div class="message-row__content">
+                <span class="message__author">HJ</span>
+                <div class="message__info">
+                    <span class="message__bubble">Is the menu okay? what do you wanna eat?</span>
+                    <span class="message__time">21:34</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-row message-row--own">
+            <div class="message-row__content">
+                <div class="message__info">
+                    <span class="message__bubble">whatever you want</span>
+                    <span class="message__time">21:35</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <form class="reply">
+        <div class="reply__column">
+            <i class="far fa-plus-square fa-2x"></i>
+        </div>
+        <div class="reply__column">
+            <input type="text" placeholder="Write a message..." />
+            <i class="far fa-smile-wink fa-lg"></i>
+            <button>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </form>
+
+    <div class="no-mobile">
+        <span>Your screen is too big.</span>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/6478f529f2.js" crossorigin="anonymous"></script>
+</body>
+</html>
